@@ -19,30 +19,30 @@ ezio.addCommand(
   {
     pattern: ["owner", "creater"],
     desc: "It's send Owner Detals",
-    sucReact: "👨🏼‍💻",
+    sucReact: "🚚",
     category: ["all", "system"],
   },
   async (message, client) => {
     try {
       const buttons = [
         { buttonId: ".donate", buttonText: { displayText: "💰 Donate 💰" }, type: 1, },
-        { buttonId: ".extra_urls", buttonText: { displayText: "🔗 Extra Urls 🔗" }, type: 1, },
+        { buttonId: ".extra_urls", buttonText: { displayText: "روابط الجروبات" }, type: 1, },
       ];
       const text = `------- Owner Detals -------
 
-⚜ Name: Dark Ezio.
-⚜ Number: Wa.me/94761539856
-⚜ Company: Subadra Bro
+⚜ Name: ayoub .
+⚜ Number: Wa.me/212618904019
+⚜ Company: moroco taza
 ⚜ Web Site: https://aidarkezio.github.io/
-⚜ Youtube: https://www.youtube.com/channel/UCeDeaDD8dpdMT2gO3VHY1JQ
-⚜ GitHub: https://www.github.com/aidarkezio
-⚜ FaceBook: https://fb.com/poshitha.subadra (Poshitha Subadra)
-⚜ Instagram: https://instagram.com/subadraposhitha (Poshitha Subadra)
-⚜ Twitter: https://twitter.com/brosubadra (BroSubadra)
+⚜ Youtube: https://www.youtube.com/channel/UCeDeaDD8dpdMT2gVHY1JQ
+⚜ GitHub: https://www.github.com/aidaio
+⚜ FaceBook: https://fb.com/pha.sua (Potha Sra)
+⚜ Instagram: https://instagram.com/subadrtha (Potha Sudra)
+⚜ Twitter: https://twitter.com/ba (BroSubadra)
 
 ----------------------------
 
-💌 Plz Subscribe Me On  Youtube.
+كيف حالك
 
 ----------------------------
 `;
