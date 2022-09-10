@@ -31,38 +31,38 @@ ezio.addCommand(
       let Wspeed = speed() - timestampe;
       const Footer = ezio.config.exif.footer;
       const Content = `┌─❖
-│「 Hi 👋 」
+_____مرحبا_______
 └┬❖ 「 ${message.client.pushName} 」
-┌┤✑  I'm alive Now🎉
-││✑  🐦🖐️!!
+┌┤✑  انا اونلاين يمكنك استتخدام البوت🎉
+││✑  اهلا!!
 │└───────────────┈ ⳹
 │ 「 BOT INFO 」
 │✙
-│✙ 𝗦𝗽𝗲𝗲𝗱 : ${Wspeed.toFixed(4)} miliseconds
+│✙ سرعة البوت: ${Wspeed.toFixed(4)} miliseconds
 │✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : Whats_Bot_MD
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : Dark_Ezio
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${ezio.config.exif.owner[0]}
+│✙ اسم البوت: Whats_Bot_MD
+│✙ اسم صاحب البوت : Dark_Ezio
+│🤵 �رقم صاحب البوت: ${ezio.config.exif.owner[0]}
 │✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
 │✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${global.mydb.users.length}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁𝘀 : ${global.mydb.hits}
+│💹عدد مستخدمين البوت: ${global.mydb.users.length}
+│☑️ 𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁𝘀 : ${global.mydb.hits}
 └┬──────────────┈ ⳹
  │✑  D & T : ${ov_time}
  │✑  Please Select The Button Below.
  └───────────────┈ ⳹`;
 
       const buttons = [
-        { buttonId: ".extra_urls", buttonText: { displayText: "🔗 Extra Urls 🔗" }, type: 1, },
-        { buttonId: ".creater", buttonText: { displayText: "👨🏼‍💻 Creater & Owner 👨🏼‍💻" }, type: 1, },
-        { buttonId: ".menu", buttonText: { displayText: "🔖 All Menu 🔖" }, type: 1, },
+        { buttonId: ".extra_urls", buttonText: { displayText: "روابط مجموعاتنا" }, type: 1, },
+        { buttonId: ".creater", buttonText: { displayText: "معلومات البوت والصانع" }, type: 1, },
+        { buttonId: ".menu", buttonText: { displayText: "قائمة الاوامر }, type: 1, },
       ]
 
       // const template_Buttons = [
       //   {
       //     urlButton: {
       //       displayText: "📰 Subscrib On YouTube 📍",
-      //       url: "https://www.youtube.com/channel/UCeDeaDD8dpdMT2gO3VHY1JQ",
+      //       url: "https://www.youtube.com/channel/UCeDeaDD8Y1JQ",
       //     },
       //   },
       //   {
@@ -73,13 +73,13 @@ ezio.addCommand(
       //   },
       //   {
       //     quickReplyButton: {
-      //       displayText: "🔖 All Menu 🔖",
+      //       displayText: "القائمة",
       //       id: ".all-menu",
       //     },
       //   },
       //   {
       //     quickReplyButton: {
-      //       displayText: "⭐ All List ⭐",
+      //       displayText: "لائحة الوامر",
       //       id: `.all-list`,
       //     },
       //   },
