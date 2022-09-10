@@ -14,7 +14,7 @@ const ezio = require("../events");
 const lang = ezio.getString("github");
 const axios = require("axios");
 
-ezio.addCommand({ pattern: ["g-promote"], usage: '<mentions|reply>', sucReact: "😎", category: ["group", "all"], },
+ezio.addCommand({ pattern: ["promote"], usage: '<mentions|reply>', sucReact: "😎", category: ["group", "all"], },
   async (message, client) => {
     if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.owner) }, { quoted: message } ); };
     if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.group) }, { quoted: message } ); };
