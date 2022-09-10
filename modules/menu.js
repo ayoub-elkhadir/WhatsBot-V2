@@ -22,14 +22,14 @@ ezio.addCommand({ pattern: ["menu", 'help'], desc: Lang.DESCC, sucReact: "📰",
     if (!message.client.prefix || !message.client.prefix.length == 1) prefix = '.';
     let CMD_HELP = `
 ◉═════════════◉
-  💎 Whats-Bot Commands 💎
+  💎 ayoub💎
 ◉═════════════◉
 ┌─(⚜ All Commands)
 │
 `;
     ezio.commands.map((command) => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
-      if (command.category.includes('all')) { command.pattern.map((cmd) => CMD_HELP += "│ *🎀 :-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
+      if (command.category.includes('all')) { command.pattern.map((cmd) => CMD_HELP += "│ *✅:-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
     CMD_HELP += "│\n│ 💓 Created By Whats_Bot-MD\n└─────────◉";
     await client.sendMessage( message.from,{ image: { url: ezio.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
@@ -49,7 +49,7 @@ ezio.categories.map(category => {
     if (!message.client.prefix || !message.client.prefix.length == 1) prefix = '.';
     let CMD_HELP = `
 ◉═════════════◉
-  💎 Whats-Bot Commands 💎
+  💎 Whayoub 💎
 ◉═════════════◉
 ┌─(⚜ ${cTitle[category]} Commands)
 │
