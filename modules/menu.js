@@ -14,24 +14,24 @@ const ezio = require("../events");
 const Lang = ezio.getString("_whats");
 // const fs = require("fs");
 // const path = require("path");
-let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat", "system": "System", 'fun': "Fun", '18+': "18+", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo", }
+let cTitle = { "search": "Search",  "all": 'All', "download": "Download", "chat": "Chat", "system": "System", 'fun': "Fun", '18+': "18+", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo", }
 
 ezio.addCommand({ pattern: ["menu", 'help'], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
   try {
     let prefix = new String; 
     if (!message.client.prefix || !message.client.prefix.length == 1) prefix = '.';
     let CMD_HELP = `
-◉═════════════◉
-  💎 ayoub💎
-◉═════════════◉
-┌─(⚜ All Commands)
-│
+_________________
+  Ayoub elkhadir 
+_________________
+  (⚜ لا ئحة الاوامر )
+
 `;
     ezio.commands.map((command) => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
       if (command.category.includes('all')) { command.pattern.map((cmd) => CMD_HELP += "│ *✅:-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
-    CMD_HELP += "│\n│ 💓 Created By Whats_Bot-MD\n└─────────◉";
+    CMD_HELP += "│\n│ 😀اتمنى ان ينال اعجابك البوت \n└─────────◉";
     await client.sendMessage( message.from,{ image: { url: ezio.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
     global.catchError = false;
   } catch (error) { global.catchError = true; return await client.sendErrorMessage( message.from, error, message.key, message);}
@@ -48,17 +48,17 @@ ezio.categories.map(category => {
     let prefix = new String; 
     if (!message.client.prefix || !message.client.prefix.length == 1) prefix = '.';
     let CMD_HELP = `
-◉═════════════◉
-  💎 Whayoub 💎
-◉═════════════◉
+__________________
+  Ayoub elkhadir 
+__________________
 ┌─(⚜ ${cTitle[category]} Commands)
 │
 `;
     ezio.commands.map((command) => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
-      if (command.category.includes(category)) { command.pattern.map((cmd) => CMD_HELP += "│ *🎀 :-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
+      if (command.category.includes(category)) { command.pattern.map((cmd) => CMD_HELP += "│ *🛸:-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
-    CMD_HELP += "│\n│ 💓 Created By Whats_Bot-MD\n└─────────◉";
+    CMD_HELP += "│\n│ اتمنى ان ينال اعجابكم البوت 💪\n└─────────◉";
     await client.sendMessage( message.from,{ image: { url: ezio.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
     global.catchError = false;
   } catch (error) { global.catchError = true; return await client.sendErrorMessage( message.from, error, message.key, message);}
@@ -88,15 +88,15 @@ ezio.addCommand({ pattern: [`cmds-count`], sucReact: "🆗", category: ["all", "
       if (!command.dontAddCommandList) visible_cmd += command.pattern.length;
       if (command.dontAddCommandList) invisible_cmd += command.pattern.length;
       if (command.category.includes("search")) search_cmd += command.pattern.length;
-      if (command.category.includes("downloade")) downloade_cmd += command.pattern.length;
-      if (command.category.includes("chat")) chat_cmd += command.pattern.length;
+      if (command.category.includes("download")) downloadcmd += command.pattern.length;
+      if (command.category.includes("chat")) chatcmd += command.pattern.length;
       if (command.category.includes("system")) system_cmd += command.pattern.length;
-      if (command.category.includes("fun")) fun_cmd += command.pattern.length;
+      if (command.category.includes("fun")) funcmd += command.pattern.length;
       if (command.category.includes("18+")) eighteenplus_cmd += command.pattern.length;
-      if (command.category.includes("owner")) owner_cmd += command.pattern.length; 
-      if (command.category.includes("create")) create_cmd += command.pattern.length; 
-      if (command.category.includes("group")) group_cmd += command.pattern.length; 
-      if (command.category.includes("logo")) logo_cmd += command.pattern.length; 
+      if (command.category.includes("owner")) ownercmd += command.pattern.length; 
+      if (command.category.includes("create")) createcmd += command.pattern.length; 
+      if (command.category.includes("group")) groupcmd += command.pattern.length; 
+      if (command.category.includes("logo")) logocmd += command.pattern.length; 
       countcmdOfCmd += command.pattern.length;
     });
     let text = `------- Command Count -------
@@ -118,8 +118,8 @@ ezio.addCommand({ pattern: [`cmds-count`], sucReact: "🆗", category: ["all", "
 💢 Count Of All Commands: ${countcmdOfCmd.toString()}
 `;
     const buttons = [
-      { buttonId: ".extra_urls", buttonText: { displayText: "🔗 Extra Urls 🔗" }, type: 1, },
-      { buttonId: ".system-menu", buttonText: { displayText: "📠 System menu 📠" }, type: 1, },
+      { buttonId: ".extra_urls", buttonText: { displayText: "روابط مجموعاتنا" }, type: 1, },
+      { buttonId: ".system-menu", buttonText: { displayText: "القائمة" }, type: 1, },
     ];
     const Message = {
       image: { url: ezio.config.image.url.D_E_DP_ },
