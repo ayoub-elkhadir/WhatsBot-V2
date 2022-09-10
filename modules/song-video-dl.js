@@ -36,22 +36,22 @@ ezio.addCommand(
           : video = videos.videos[Math.floor(Math.random() * videos.videos.length)]
         let caption = `
 —————————————————————————
-♻ Title : ${video.title}
+♻ العنوان : ${video.title}
 ♻ Ext : Search [${message.client.command=='song'?'first':"random"} song]
 ♻ ID : ${video.videoId}
-♻ Duration : ${video.timestamp}
-♻ Viewes : ${video.views}
+♻ مدة الفيديو : ${video.timestamp}
+♻ مدة الفيديو: ${video.views}
 ♻ Uploaded On : ${video.ago}
 ♻ Author : ${video.author.name}
-♻ Channel : ${video.author.url}
-♻ Description : ${video.description}
-♻ Url : ${video.url}
+♻ القنات : ${video.author.url}
+♻ الوصف : ${video.description}
+♻ الرابط: ${video.url}
 —————————————————————————
 ${ezio.config.exif.cap}
 _________________________`;
 
         const Buttons = [
-          { buttonId: `ytmp4-s ${video.url}`, buttonText: { displayText: "🎞 Video 📽️" }, type: 1, },
+          { buttonId: `ytmp4-s ${video.url}`, buttonText: { displayText: "فيديو" }, type: 1, },
         ];
         const Message = {
           image: {url: video.thumbnail },
@@ -93,22 +93,22 @@ ezio.addCommand(
           : video = videos.videos[Math.floor(Math.random() * videos.videos.length)]
         let caption = `
 —————————————————————————
-♻ Title : ${video.title}
+♻ العنوان: ${video.title}
 ♻ Ext : Search [${message.client.command == "video"| 'yt-video' ? "first" : "random"} song]
 ♻ ID : ${video.videoId}
-♻ Duration : ${video.timestamp}
-♻ Viewes : ${video.views}
+♻ مدة الفيو: ${video.timestamp}
+♻ عدد المشاهدات: ${video.views}
 ♻ Uploaded On : ${video.ago}
 ♻ Author : ${video.author.name}
-♻ Channel : ${video.author.url}
-♻ Description : ${video.description}
-♻ Url : ${video.url}
+♻ القنات: ${video.author.url}
+♻ الوصف: ${video.description}
+♻ الرابط: ${video.url}
 —————————————————————————
 ${ezio.config.exif.cap}
 _________________________`;
 
         const Buttons = [
-          { buttonId: `ytmp3-s ${video.url}`, buttonText: { displayText: "🎼 Audio 🎵" }, type: 1, },
+          { buttonId: `ytmp3-s ${video.url}`, buttonText: { displayText: "مسيقى" }, type: 1, },
         ];
         const Message = {
           image: {url: video.thumbnail },
